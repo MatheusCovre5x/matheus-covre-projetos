@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetShop Amigo Fiel</title>
+    <style>/* =Zera as margens padrão do navegador para ter controle total */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =Estilos Gerais do Corpo */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte moderna */
+    background-color: #fdfbf7; /* Um bege bem clarinho para o fundo */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* =Cabeçalho */
+header {
+    background-color: #ff8c00; /* Laranja vibrante */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+}
+
+/* =Menu Principal (Topo) */
+.menu {
+    list-style: none; /* Remove as bolinhas da lista */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background 0.3s;
+}
+
+.menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Efeito ao passar o mouse */
+}
+
+/* =Conteúdo Principal */
+main {
+    max-width: 1000px;
+    margin: 40px auto; /* Centraliza na tela */
+    padding: 0 20px;
+}
+
+section {
+    background: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+h2 {
+    color: #ff8c00;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #eee;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* =Imagens */
+img {
+    max-width: 100%;
+    height: 250px; /* Altura fixa para ficarem iguais */
+    width: 250px;
+    object-fit: cover; /* Corta a imagem para não esticar */
+    border-radius: 15px;
+    border: 4px solid #40e0d0; /* Borda Turquesa */
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+img:hover {
+    transform: scale(1.05); /* Pequeno zoom ao passar o mouse */
+}
+
+/* =Vídeo */
+iframe {
+    max-width: 100%;
+    border-radius: 10px;
+    border: 4px solid #333;
+}
+
+/* =Tabela de Serviços (Menu2) */
+.menu2 {
+    width: 100%;
+    border-spacing: 10px; /* Espaço entre as células */
+    border-collapse: separate; 
+}
+
+/* Transforma os links da tabela em "botões" */
+.menu2 td a {
+    display: block;
+    background-color: #40e0d0; /* Turquesa */
+    color: #fff;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.menu2 td a:hover {
+    background-color: #20b2aa; /* Turquesa mais escuro */
+    transform: translateY(-3px); /* Levanta levemente o botão */
+}
+
+/* Responsividade para a tabela de serviços em celulares */
+@media (max-width: 768px) {
+    .menu2 thead, .menu2 tr, .menu2 td {
+        display: block;
+        width: 100%;
+    }
+    .menu2 td {
+        margin-bottom: 10px;
+    }
+}
+
+/* =Rodapé */
+footer {
+    background-color: #333;
+    color: #f1f1f1;
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px 0;
+}</style>
+</head>
+
+<body>
+    <header>
+        <h1>🐾 PetShop Amigo Fiel 🐾</h1>
+        <ul class="menu">
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Pacotes</a></li>
+            <li><a href="#">Cachorro</a></li>
+            <li><a href="#">Gato</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section>
+            <h2>Bem-vindo ao nosso Petshop!</h2>
+            <p>Oferecemos os melhores cuidados para o seu pet: banho, tosa, alimentação de qualidade e muito carinho ❤️</p>
+        </section>
+
+        <section>
+            <h2>Imagens</h2>
+            <img src="https://www.petz.com.br/blog/wp-content/uploads/2021/04/raca-de-cachorro-docil-2.jpg" alt="Cachorro fofo">
+            <img src="https://img.freepik.com/fotos-gratis/retrato-de-solo-adoravel-cachorro-beagle_53876-64817.jpg?semt=ais_hybrid&w=740&q=80" alt="Gatinho fofo">
+        </section>
+
+        <section>
+            <h2>Vídeos</h2>
+            <iframe width="400" height="250" src="https://www.youtube.com/embed/Kw--VPDFqJU" frameborder="0" allowfullscreen></iframe>
+        </section>
+
+        <section>
+            <h2>Serviços</h2>
+            <table class="menu2">
+                <thead>
+                    <tr>
+                        <td><a href="#">Banho & Tosa</a></td>
+                        <td><a href="#">Hospedagem</a></td>
+                        <td><a href="#">Veterinário</a></td>
+                        <td><a href="#">Acessórios</a></td>
+                        <td><a href="#">Alimentação</a></td>
+                    </tr>
+                </thead>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>📍 Endereço: Rua dos Pets, 123 - Cidade Fofura</p>
+        <p>📞 Telefone: (61) 99999-9999</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f8ff;
+    color: #4a4a4a;
+}
+
+
+.login-container {
+    background-color: #ffffff;
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+}
+
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.login-form h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #005f73;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+
+.login-form h1::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #94d2bd;
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+
+.login-form label {
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #005f73;
+}
+
+
+.login-form input,
+.login-form select {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    background-color: #f7f8fc;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+
+.login-form select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23005f73' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+}
+
+
+
+
+.login-form input:focus,
+.login-form select:focus {
+    outline: none;
+    border-color: #94d2bd;
+    box-shadow: 0 0 0 3px rgba(148, 210, 189, 0.3);
+}
+
+
+
+
+.login-form button {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #005f73;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+.login-form button:hover {
+    background-color: #0a9396;
+    transform: translateY(-2px);
+}
+</style>
+</head>
+<body>
+    <div class="login-container">
+        <form action="" method="post" class="login-form">
+            <h1>Clínica Profi</h1>
+           
+            <label for="email">Matrícula:</label>
+            <input type="email" id="email" name="email"
+                   required placeholder="Digite sua matrícula" /> <br /> <br />
+           
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha"
+                   required placeholder="Digite sua senha" />
+            <label for="Cargo">Cargo</label>
+            <select id="cargo" name="cargo" required>
+                <option value="" disabled selected>Selecione seu cargo</option>
+                <option value="Medicina">Médico</option>
+                <option value="Enfermagem">Enfermeiro</option>
+                <option value="pediatria">Pediátrico</option>
+                <option value="Farmaceutico">Farmaceutico</option>
+                <option value="outros">Outras áreas</option> </select>
+           
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById("loginform").addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Logado com sucesso!');
+    this.reset();
+});
+</script>
+</body>
+</html>

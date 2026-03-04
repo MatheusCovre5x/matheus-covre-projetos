@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biografia de César Lattes</title>
+    <style>/* Importando a fonte Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Variáveis de cores baseadas no Tailwind */
+:root {
+    --primary-blue: #1e40af;   /* blue-800 */
+    --accent-blue: #2563eb;    /* blue-600 */
+    --hover-blue: #1d4ed8;     /* blue-700 */
+    --bg-body: #f9fafb;        /* gray-50 */
+    --bg-white: #ffffff;
+    --bg-footer: #1f2937;      /* gray-800 */
+    --text-dark: #111827;      /* gray-900 */
+    --text-body: #374151;      /* gray-700 */
+    --text-muted: #4b5563;     /* gray-600 */
+    --text-light: #d1d5db;     /* gray-300 */
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-body);
+    line-height: 1.6;
+}
+
+/* Layout Geral */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem; /* px-6 */
+}
+
+/* Header */
+header {
+    background-color: var(--bg-white);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+}
+
+header h1 {
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 700;
+    color: var(--primary-blue);
+}
+
+header p {
+    font-size: 1.125rem; /* text-lg */
+    color: var(--text-muted);
+}
+
+/* Main Content Padding */
+main {
+    padding: 3rem 0;
+}
+
+/* Componente de Card (Usado no Hero e nos Grids) */
+.card {
+    background-color: var(--bg-white);
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); /* shadow-lg */
+    padding: 2rem;
+}
+
+/* Seção Hero */
+.hero {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.hero-content {
+    flex: 2;
+}
+
+.hero-content h2 {
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--accent-blue);
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--hover-blue);
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+/* Responsividade do Hero (Desktop) */
+@media (min-width: 768px) {
+    .hero {
+        flex-direction: row;
+        align-items: center;
+    }
+    .hero-content {
+        padding-right: 2rem;
+    }
+}
+
+/* Seção Contribuições */
+.section-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.grid-contributions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    .grid-contributions {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.contribution-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+}
+
+/* Seção Legado (Azul Escuro) */
+.legacy-section {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 2.5rem;
+}
+
+.legacy-section h2 {
+    text-align: center;
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.legacy-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .legacy-grid {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .legacy-item {
+        width: 50%;
+        padding: 0 1rem;
+    }
+}
+
+.legacy-item h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.legacy-item p {
+    color: #dbeafe; /* blue-100 */
+}
+
+/* Footer */
+footer {
+    background-color: var(--bg-footer);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}</style>
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <h1>César Lattes</h1>
+            <p>O Gigante da Física Brasileira</p>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="hero card">
+            <div class="hero-content">
+                <h2>Um Pioneiro da Física de Partículas</h2>
+                <p>
+                    César Lattes foi um físico brasileiro de importância mundial, cuja participação na
+                    descoberta do méson pi revolucionou a compreensão da física atômica e nuclear.
+                    Sua trajetória abriu caminhos para a física de altas energias e consolidou
+                    a pesquisa científica no Brasil.
+                </p>
+                <a href="#legado" class="btn-primary">
+                    Conheça o Legado
+                </a>
+            </div>
+            <div class="hero-image">
+                <img src="https://nexo-uploads-beta.s3.amazonaws.com/wp-content/uploads/images/2024/07/cesarlattes1949.png" 
+                     alt="Retrato de César Lattes escrevendo em um quadro-negro">
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Contribuições Científicas</h2>
+            <div class="grid-contributions">
+                
+                <div class="card contribution-card">
+                    <h3>A Descoberta do Méson Pi (Píon)</h3>
+                    <p>
+                        Em 1947, Lattes foi co-autor da descoberta experimental do méson pi. Utilizando chapas fotográficas com emulsões especiais
+                        nas altitudes elevadas dos Andes, ele detectou partículas vindas de raios cósmicos, comprovando
+                        a teoria de Hideki Yukawa sobre as forças que mantêm o núcleo atômico coeso.
+                    </p>
+                </div>
+                
+                <div class="card contribution-card">
+                    <h3>Pioneirismo em Aceleradores</h3>
+                    <p>
+                        Posteriormente, em Berkeley, EUA, Lattes foi pioneiro na produção artificial
+                        dessas mesmas partículas em aceleradores. Esse feito não apenas confirmou
+                        sua descoberta anterior, mas também ajudou a calcular a massa do méson pi e
+                        abriu o campo da física de altas energias.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="legado" class="card legacy-section">
+            <h2>Legado e Impacto</h2>
+            <div class="legacy-grid">
+                <div class="legacy-item">
+                    <h3>Consolidação da Física no Brasil</h3>
+                    <p>
+                        César Lattes teve um papel decisivo na consolidação da física experimental no Brasil.
+                        Ele ajudou a fundar instituições de pesquisa e inspirou gerações de
+                        novos cientistas, deixando uma marca indelével na ciência nacional.
+                    </p>
+                </div>
+                <div class="legacy-item">
+                    <h3>A Plataforma Lattes</h3>
+                    <p>
+                        Como maior homenagem ao seu legado, a principal plataforma de currículos
+                        acadêmicos e de pesquisa do Brasil, gerenciada pelo CNPq, leva o seu nome.
+                        A Plataforma Lattes é a ferramenta central para o gerenciamento da produção
+                        científica no país.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Página criada para a disciplina de Interação Humano-Computador.</p>
+    </footer>
+
+</body>
+</html>
